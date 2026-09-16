@@ -1,0 +1,108 @@
+.contact {
+  background: #111;
+  padding: 80px 100px;
+}
+
+.contact .heading {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact .heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.contact .contactInfo {
+  width: 40%;
+}
+
+.contact .contactInfo h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact .contactInfoBx .box {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact .contactInfoBx .box .icon {
+  min-width: 40px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.contact .contactInfoBx .box .text h3 {
+  color: #2196f3;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contact .contactInfoBx .box .text p {
+  color: #fff;
+  font-size: 14px;
+}
+
+.contact .formBx {
+  width: 60%;
+}
+
+.contact .formBx form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .formBx form h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact .formBx form input,
+.contact .formBx form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  background: #222;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.contact .formBx form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact .formBx form input[type='submit'] {
+  max-width: 150px;
+  background: #2196f3;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .contact {
+    padding: 50px 20px;
+  }
+  .contact .content {
+    flex-direction: column;
+  }
+  .contact .contactInfo,
+  .contact .formBx {
+    width: 100%;
+  }
+}

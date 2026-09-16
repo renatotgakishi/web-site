@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react'
 import type { Page } from '@/payload-types'
-import { SobreBlockComponent } from '@/blocks/SobreBlockComponent'
-import { ServicosBlockComponent } from '@/blocks/ServicosBlockComponent'
-import { TrabalhosBlockComponent } from '@/blocks/TrabalhosBlockComponent'
-import { DepoimentosBlockComponent } from '@/blocks/DepoimentosBlockComponent'
-import { ContatoBlockComponent } from '@/blocks/ContatoBlockComponent'
+import { SobreBlockComponent } from '@/blocks/SobreBlock/Component'
+import { ServicosBlockComponent } from '@/blocks/ServicosBlock/Component'
+import { TrabalhosBlockComponent } from '@/blocks/TrabalhosBlock/Component'
+import { DepoimentosBlockComponent } from '@/blocks/DepoimentosBlock/Component'
+import { ContatoBlockComponent } from '@/blocks/ContatoBlock/Component'
+
+import { BlogBlock } from '../blocks/BlogBlock/Component'
 
 import { ArchiveBlock } from '@/blocks/ArchiveBlock/Component'
 import { CallToActionBlock } from '@/blocks/CallToAction/Component'
@@ -23,6 +25,7 @@ const blockComponents: any = {
   trabalhosBlock: TrabalhosBlockComponent,
   depoimentosBlock: DepoimentosBlockComponent,
   contatoBlock: ContatoBlockComponent,
+  blogBlock: BlogBlock,
 }
 
 export const RenderBlocks: React.FC<{

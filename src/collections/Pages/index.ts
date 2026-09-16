@@ -8,11 +8,11 @@ import { Content } from '../../blocks/Content/config'
 import { FormBlock } from '../../blocks/Form/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
 
-import { SobreBlock } from '../../blocks/SobreBlock'
-import { ServicosBlock } from '../../blocks/ServicosBlock'
-import { TrabalhosBlock } from '../../blocks/TrabalhosBlock'
-import { DepoimentosBlock } from '../../blocks/DepoimentosBlock'
-import { ContatoBlock } from '../../blocks/ContatoBlock'
+import { SobreBlock } from '../../blocks/SobreBlock/config'
+import { ServicosBlock } from '../../blocks/ServicosBlock/config'
+import { TrabalhosBlock } from '../../blocks/TrabalhosBlock/config'
+import { DepoimentosBlock } from '../../blocks/DepoimentosBlock/config'
+import { ContatoBlock } from '../../blocks/ContatoBlock/config'
 
 import { hero } from '@/heros/config'
 import { slugField } from 'payload'
@@ -79,12 +79,17 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock,
+              blocks: [
+                CallToAction,
+                Content,
+                MediaBlock,
+                Archive,
+                FormBlock,
                 SobreBlock,
                 ServicosBlock,
                 TrabalhosBlock,
                 DepoimentosBlock,
-                ContatoBlock
+                ContatoBlock,
               ],
               required: true,
               admin: {

@@ -73,9 +73,9 @@ export default buildConfig({
     Media,
     Categories,
     Users,
-    Servicos,  // <-- NOVO: seus serviços do portfólio antigo
-    Empresas,  // <-- NOVO: logos das empresas onde trabalhou
-    Depoimentos // <-- NOVO: depoimentos
+    Servicos, // <-- NOVO: seus serviços do portfólio antigo
+    Empresas, // <-- NOVO: logos das empresas onde trabalhou
+    Depoimentos, // <-- NOVO: depoimentos
   ],
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
