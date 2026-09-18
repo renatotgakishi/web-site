@@ -18,7 +18,8 @@ export const BannerBlock: React.FC<Props> = ({
   botaoLink,
   foto,
 }) => {
-  const imageUrl = typeof foto === 'object' ? foto?.url : null
+  //const imageUrl = typeof foto === 'object' ? foto?.url : '/fotoeu.png'
+  const imageUrl = typeof foto === 'object' && foto !== null && foto?.url ? foto.url : '/fotoeu.png'
 
   return (
     <section
