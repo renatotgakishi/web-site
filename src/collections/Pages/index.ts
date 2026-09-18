@@ -8,6 +8,7 @@ import { Content } from '../../blocks/Content/config'
 import { FormBlock } from '../../blocks/Form/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
 
+import { BannerBlock } from '../../blocks/BannerBlock/config'
 import { SobreBlock } from '../../blocks/SobreBlock/config'
 import { ServicosBlock } from '../../blocks/ServicosBlock/config'
 import { TrabalhosBlock } from '../../blocks/TrabalhosBlock/config'
@@ -90,6 +91,7 @@ export const Pages: CollectionConfig<'pages'> = {
                 TrabalhosBlock,
                 DepoimentosBlock,
                 ContatoBlock,
+                BannerBlock,
               ],
               required: true,
               admin: {
