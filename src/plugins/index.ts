@@ -3,6 +3,8 @@ import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
 import { redirectsPlugin } from '@payloadcms/plugin-redirects'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import { searchPlugin } from '@payloadcms/plugin-search'
+import { s3Storage } from '@payloadcms/storage-s3'
+
 import { Plugin } from 'payload'
 import { revalidateRedirects } from '@/hooks/revalidateRedirects'
 import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
@@ -88,5 +90,23 @@ export const plugins: Plugin[] = [
         return [...defaultFields, ...searchFields]
       },
     },
+  }),
+  s3Storage({
+    collections: {
+      media: {
+        disableLocalStorage: true,
+      },
+    },
+    bucket: process.env.S3_BUCKET as string,
+    config: {
+      endpoint: process.env.S3_ENDPOINT as string,
+      region: process.env.S3_REGION as string,
+      credentials: {
+        accessKeyId: process.env.S3_ACCESS_KEY_ID as string,
+        secretAccessKey: process.env.S3_SECRET_ACCESS_KEY as string,
+      },
+      forcePathStyle: true,
+    },
+    clientUploads: false,
   }),
 ]
