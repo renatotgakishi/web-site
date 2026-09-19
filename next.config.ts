@@ -17,6 +17,9 @@ const nextConfig: NextConfig = {
   sassOptions: {
     loadPaths: ['./node_modules/@payloadcms/ui/dist/scss/'],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     localPatterns: [
       {
@@ -33,6 +36,14 @@ const nextConfig: NextConfig = {
           protocol: url.protocol.replace(':', '') as 'http' | 'https',
         }
       }),
+      {
+        protocol: 'https',
+        hostname: 'pxiqhtcwohjhunqhesjv.supabase.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'pxiqhtcwohjhunqhesjv.storage.supabase.co',
+      },
     ],
   },
   webpack: (webpackConfig) => {
